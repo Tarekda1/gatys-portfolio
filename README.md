@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Setup Notes
 
 1. All components ready to go (including imports)
@@ -34,3 +35,7 @@ const Component = () => {
       },
     },
 ```
+=======
+# gatys-portfolio
+A portfolio website using gatsby and graphql
+>>>>>>> 0124e80b2ecfa52243a276f34a651a661eb49505
