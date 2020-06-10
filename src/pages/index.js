@@ -12,7 +12,11 @@ export default ({ data }) => {
     allProjects: { projects },
   } = data
 
-  console.log(projects)
+  const {
+    allBlogs: { blogs },
+  } = data
+
+  console.log(blogs)
 
   return (
     <Layout>
@@ -20,6 +24,7 @@ export default ({ data }) => {
       <Services />
       <Jobs />
       <Projects title="featured projects" projects={projects} showLink />
+      <Blogs title="Blogs" blogs={blogs} showLink />
     </Layout>
   )
 }
@@ -44,6 +49,25 @@ export const query = graphql`
           }
         }
         title
+      }
+    }
+    allBlogs: allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
+      blogs: nodes {
+        id
+        strapiId
+        slug
+        content
+        description
+        date(formatString: "MMMM Do,YYYY")
+        image {
+          id
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        category
       }
     }
   }

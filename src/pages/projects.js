@@ -4,8 +4,43 @@ import { graphql } from "gatsby"
 import Projects from "../components/Projects"
 // ...GatsbyImageSharpFluid
 
-const ProjectsPage = () => {
-  return <h2>projects page</h2>
+const ProjectsPage = ({
+  data: {
+    allProjects: { projects },
+  },
+}) => {
+  return (
+    <Layout>
+      <section className="blog-page">
+        <Projects title="Projects" projects={projects} />
+      </section>
+    </Layout>
+  )
 }
+
+export const query = graphql`
+  {
+    allProjects: allStrapiProjects(filter: { featured: { eq: true } }) {
+      projects: nodes {
+        featured
+        id: strapiId
+        description
+        tag {
+          id
+          title
+        }
+        image {
+          childImageSharp {
+            id
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        title
+      }
+    }
+  }
+`
 
 export default ProjectsPage
