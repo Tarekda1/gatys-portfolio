@@ -45,7 +45,7 @@ Variables
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
+  --max-width: 1000px;
   --fixed-width: 700px;
 }
 /*
@@ -162,7 +162,7 @@ p {
 .section-center {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: var(--max-width);
 }
 @media screen and (min-width: 992px) {
   .section-center {
@@ -808,7 +808,7 @@ Blog
 @media screen and (min-width: 576px) {
   .blogs-center {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     column-gap: 2rem;
   }
   .blog-img {

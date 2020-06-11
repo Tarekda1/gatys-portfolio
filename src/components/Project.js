@@ -39,6 +39,13 @@ const Project = ({
   )
 }
 
-Project.propTypes = {}
+Project.propTypes = {
+  title: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  tag: PropTypes.arrayOf(<PropTypes className="object"></PropTypes>).isRequired,
+}
 
 export default Project
