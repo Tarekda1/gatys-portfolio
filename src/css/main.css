@@ -465,6 +465,14 @@ Hero
     display: block;
     grid-row: 1/1;
     grid-column: 6/-1;
+    display: block;
+    grid-row: 1/1;
+    grid-column: 6/-1;
+    width: 450px;
+    max-height: 350px;
+    max-width: 350px;
+    border-radius: 50%;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1170px) {
