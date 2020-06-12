@@ -25,7 +25,6 @@ const About = ({
           <article className="about-text">
             <Title title={title} />
             <p>{info}</p>
-            <span>test</span>
             <div className="about-stack">
               {tags.map(tag => {
                 return <span key={tag.id}>{tag.title}</span>
