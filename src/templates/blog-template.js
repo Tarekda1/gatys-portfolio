@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import ReactMarkdown from "react-markdown"
 import Title from "../components/Title"
-
+import SEO from "../components/SEO"
 const ComponentName = ({
   data: {
     blog: { id, title, image, category, description, slug, date, content },
