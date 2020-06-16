@@ -11,6 +11,7 @@ const ComponentName = ({
 }) => {
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <section className="blog-template">
         <div className="section-center">
           <article className="blog-content">
